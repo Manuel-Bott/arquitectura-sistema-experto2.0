@@ -1,0 +1,39 @@
+Name     P47SEG ;
+PartNo   00 ;
+Date     19/05/2023 ;
+Revision 01 ;
+Designer Miguel Mendoza ;
+Company  ceti ;
+Assembly None ;
+Location  ;
+Device   g22v10 ;
+ 
+/* *************** INPUT PINS *********************/
+PIN  8    =  D                       ; /*     S0                            */ 
+PIN  9    =  C                     ; /*       S1                         */ 
+PIN  10   =  B                     ; /*       S2                          */ 
+PIN  11   =  A                     ; /*       S3                          */ 
+
+/* *************** OUTPUT PINS *********************/
+
+PIN 23 = SIG;
+PIN 22 = SG;
+PIN 21 = SF;
+PIN 20 = SE;
+PIN 19 = SD;
+PIN 18 = SC;
+PIN 17 = SB;
+PIN 16 = SA;
+
+SIG   =   A                      ; /*                                 */ 
+SG   =    !A&!B&!C#B&C&D#A&!B&!C&D                     ; /*                                 */ 
+SF   =    !A&!B&D#!A&!B&C#!A&C&D#A&!C&D#A&B&C                     ; /*                                 */ 
+SE   =    D#B&!C                     ; /*                                 */ 
+SD   =    !A&!B&!C&D#B&!C&!D#B&C&D#A&!B&!C&D                     ; /*                                 */ 
+SC   =    !A&!B&C&!D#A&B&C&!D                     ; /*                                 */ 
+SB   =    !A&B&!C&D#!A&B&C&!D#A&!B&C                     ; /*                                 */ 
+SA   =    B&!C&!D#!A&!B&!C&D#A&B&C&D                     ; /*                                 */ 
+
+
+
+

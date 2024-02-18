@@ -1,0 +1,40 @@
+Name     P4SR ;
+PartNo   00 ;
+Date     19/05/2023 ;
+Revision 01 ;
+Designer Miguel Mendoza ;
+Company  ceti ;
+Assembly None ;
+Location  ;
+Device   g22v10 ;
+
+/* *************** INPUT PINS *********************/
+PIN   2  =     A3                  ; /*                                 */ 
+PIN   3  =     A2                  ; /*                                 */ 
+PIN   4  =     A1                  ; /*                                 */ 
+PIN   5  =     A0                  ; /*                                 */ 
+PIN   6  =     OP                  ; /*                                 */ 
+PIN   7  =     B3                  ; /*                                 */ 
+PIN   8  =     B2	             ; /*                                 */ 
+PIN   9  =     B1                  ; /*                                 */ 
+PIN   10 =     B0                  ; /*                                 */ 
+
+/* *************** OUTPUT PINS *********************/
+
+PIN 23 = C2 ;
+PIN 22 = C1 ;
+PIN 21 = C0 ;
+
+PIN 17 = S3; 
+PIN 16 = S2; 
+PIN 15 = S1; 
+PIN 14 = S0; 
+
+S0 = OP$A0$(OP$B0)      ; /*                                 */ 
+S1 = C0$A1$(OP$B1)      ; /*                                 */ 
+S2 = C1$A2$(OP$B2)      ; /*                                 */ 
+S3 = C2$A3$(OP$B3)      ; /*                                 */ 
+
+C0 = A0&(OP$B0)#OP&A0#OP&(OP$B0)  ; /*                                */ 
+C1 = A1&(OP$B1)#C0&A1#C0&(OP$B1)  ; /*                                 */ 
+C2 = A2&(OP$B2)#C1&A2#C1&(OP$B2)  ; /*                                 */ 
